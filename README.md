@@ -6,10 +6,7 @@ Here is the link https://sing5745.dev.fast.sheridanc.on.ca/syst10049/assign4
 
 Home Page
 ![home page]
-(https://github.com/sing5745/UberEats/raw/master/index.PNG)
-
-McDonald's 
-![mcd page](https://github.com/sing5745/WebDev/raw/master/screenshots/index.PNG)
+(https://github.com/sing5745/WebDev/raw/master/screenshots/index.PNG)
 
 Cryptogram Page
 
