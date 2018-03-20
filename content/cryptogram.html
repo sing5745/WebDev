@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Author:Inderpreet Singh
+File name: cryptogram.html
+Version:1.0
+Date Created: 17th april,2017
+Date modified :
+description:
+ the Cryptogram page for assignment 3 
+  -->
+<head>
+	<title>Cryptoram</title> 
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/main.css" rel="stylesheet" type="text/css"> <!-- link for external stylesheets  -->
+    <link href="../css/media.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"> <!-- link for font awsome icons -->
+	<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet"> <!-- link for teko font from google api -->
+	<style>
+    
+    .game {
+      height: auto;         /* auto height adjustment */
+      background-color: white;
+      align-content: center;   
+          
+      }
+        
+    .board li {     /**** To position and format the lines  **/
+	float: left;
+	list-style: none;
+	cursor: pointer;
+	margin: auto;
+	margin-top: 10px;
+	padding-top: 2px;
+	padding: 2px;
+	width: 50px;
+	font-size: 28px;
+	
+   }
+
+    .board input {
+	width: 90%;         /* force the label underneath */
+	text-align: center;	  /* center horizontally */
+	color: blue;            /* requirement not evident from screenshots */                                                 
+	height: 1.5em;
+	font-size: 1.2em;
+	border: 1px dashed orange;
+	cursor: pointer;
+	padding-top: 2px;
+	
+   }
+
+   input:hover {   /* invert color when hovered */
+	background-color: orange; 
+	opacity: 0.75;
+   }
+
+   .alpha {     /* used for the unordered list of the alphabets    **/
+	background: white;
+	color: orange;
+	width: auto;
+	height: 50px;
+	padding-top: 2px;
+	cursor: pointer;
+	list-style-type: none;
+	text-align: center;
+   }
+
+    .alpha li {
+	display: inline;   /**  horizontal alignment of list  ***/
+	margin: 0px 10px 15px 0;
+	padding-top: 5px;
+	padding: 1px;
+   }
+
+    .alpha li:hover {     /* invert color when hovered */
+	background-color: orange;
+	opacity: 0.75;
+	color: white;
+   }
+     .game:after,.board:after {  /**  Insert some text after the content of each  element **/
+	content: " ";
+	display: table;
+	clear: both;    /**  No floating elements allowed on the left or the right side of a specified element **/
+   }
+    
+    /** mobile  media query for the adjustments of cryptogram**/
+    @media screen and (max-height: 420px), screen and (max-width:740px)  {
+    .game {
+        height: auto;         /* auto height adjustment */
+        background-color: white;
+      }
+        
+    .board li {     /**** To position and format the lines  **/
+	float: left;
+	list-style: none;
+	cursor: pointer;
+	margin: auto;
+	margin-top:10px;
+	padding-top: 2px;
+	padding: 2px;
+	width: 22px;  /** changed width from 55px **/
+	font-size: 25px;  /** changed font size **/
+	
+   }
+    .board input {
+	width: 90%;         /* force the label underneath */
+	text-align: center;	  /* center horizontally */
+	color: blue;            /* requirement not evident from screenshots */                                                 
+	height: 1.0em;    /*** changed height and font size **/
+	font-size: 1.2em;
+	border: 1px dashed orange;
+	cursor: pointer;
+	padding-top: 2px;
+	
+   }
+             
+   .alpha li {
+    float: left;   /**  horizontal alignment of list  ***/
+    margin: 1.8px;      /** changed margin for the adjustments **/
+    padding-top: 5px;   /** padding decreased for the mobile **/
+    padding: 1px;       
+  }
+             
+  #footer {
+     position:relative;
+    }
+         
+}    
+        
+        
+   
+	</style>
+</head>
+<body>
+	<!-- header is the top start of the web project and has orange color background  -->
+	<header>
+		<h1>Games and Other Web Apps</h1><!--  h1 has a font size of 3.9 em and h2 of 2.5 em;  -->
+		<h2>SYST10049 Web Development</h2>
+	</header>
+	<nav> <!-- In nav three links are arranged horizontally whereas there is one sub navigation under games and is vertivally aligned --> 
+		<a href="../index.html"><i aria-hidden="true" class="fa fa-home"></i>Home</a>
+		<div class="dropdown"> <!-- div having sub div which is having links -->
+			<a href="#"><i aria-hidden="true" class="fa fa-gamepad"></i> &nbsp;Games</a>
+			<div class="dropdown-content"> <!-- div class of dropdown  is here which drops the sub navigation containing icons and links to different pages and  -->
+				<a href="cryptogram.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Cryptograms</a> <a href="hangman.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Hangman</a> <a href="memory.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Memory</a> <a href="tictactoe.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Tic-Tac-Toe</a> <a href="bingo.html"><i aria-hidden="true" class="fa fa-check-square-o"></i>&nbsp;Bingo</a>
+			</div>
+		</div><a href="#"><i aria-hidden="true" class="fa fa-sign-out"></i>Logout</a>  <!-- link to logout page but goes no where -->
+	</nav>
+	<main>
+		<h3>Cryptogram</h3>
+		<div class="game">   <!-- The white area is classified as a "game".  -->
+			<ul class="board">  <!-- The phrase is an unordered list, classified as "board". -->
+				<li><input maxlength="1"><label>H</label></li>
+				<li><input maxlength="1"><label>E</label></li>
+				<li><input maxlength="1"><label>L</label></li>
+				<li><input maxlength="1"><label>L</label></li>   <!-- each list item consists of an input element and a label -->
+				<li><input maxlength="1"><label>O</label></li>
+				<li style="list-style: none">&nbsp;</li>
+				<li><input maxlength="1"><label>W</label></li>
+				<li><input maxlength="1"><label>O</label></li>
+				<li><input maxlength="1"><label>R</label></li>
+				<li><input maxlength="1"><label>L</label></li>
+				<li><input maxlength="1"><label>D</label></li>
+			</ul><br>
+			<br>
+			<ul class="alpha">  <!--The alphabet is an unordered list, classified as "alpha" -->
+				<li>a</li>
+				<li>b</li>
+				<li>c</li>
+				<li>d</li>
+				<li>e</li>
+				<li>f</li>
+				<li>g</li>
+				<li>h</li>
+				<li>i</li>
+				<li>j</li>
+				<li>k</li>
+				<li>l</li>
+				<li>m</li>
+				<li>n</li>
+				<li>o</li>
+				<li>p</li>
+				<li>q</li>
+				<li>r</li>
+				<li>s</li>
+				<li>t</li>
+				<li>u</li>
+				<li>v</li>
+				<li>w</li>
+				<li>x</li>
+				<li>y</li>
+				<li>z</li>
+			</ul>
+		</div><button id="button3">Play Again</button> <!-- explained in main css -->
+	</main>
+	<div id="footer">  <!-- footer is having icons of facebook,pinterest,linkedin,flickr going  nowhere -->
+		<a href="#"><i aria-hidden="true" class="fa fa-facebook-square"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-pinterest-square"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-flickr"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i></a>
+		<address>  
+			Inderpreet Singh @ Web Development,Sheridan College
+		</address>
+	</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/****
+Author:Inderpreet Singh
+File name: media.css
+Version:1.0
+Date Created: 17th april,2017
+Date modified :
+description:
+ the media css  for assignment 4 containing media query
+  ****/
+
+
+
+/*** Landscape and Portrait **/
+/*** for mobile devices **/
+@media screen and (max-height: 420px), 
+screen and (max-width:740px) {
+	body {
+		background: none;
+        background-color: black;
+	}
+	header {
+		display: none;
+	}
+	nav {
+		padding: inherit;
+	}
+	/* used to fit the heading */
+	h3 {
+		font-size: 3em;
+	}
+	main {
+		background-color: rgba(0, 0, 0, 0.85);
+		/** creating main little bit transparent **/
+		margin: auto;
+		padding: 0 5px;
+		text-align: center;
+		width: auto;
+        
+		/* created auto width */
+	}
+    
+    #footer {
+	position:relative;  /** footer fixed to the bootom containing icons **/
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 7px;
+	background-color: black;
+	opacity: 0.75;
+	text-align: center;  /** aligned center**/
+	color: orange;
+    margin: 0;
+}
+    
+}
+
+/*** media query for medium devices **/
+@media screen and (max-device-width:768px) {
+        body {
+		background: none;  /** hiding background **/
+        background-color: black;
+	}
+    
+    main {
+		background-color: rgba(0, 0, 0, 0.85);
+		/** creating main little bit transparent **/
+		margin: 10px auto 25px;
+		padding: 0 5px;
+		text-align: center;
+      /* created auto width */
+	}
+        
+}

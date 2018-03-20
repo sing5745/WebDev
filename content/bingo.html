@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Author:Inderpreet Singh
+File name: template.html
+Version:1.0
+Date Created: 1st april,2017
+Date modified :
+description:
+ the bingo  page for assignment 3 
+  -->
+<head>
+	<title>Bingo</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/main.css" rel="stylesheet" type="text/css"> <!-- link for external stylesheets  -->
+    <link href="../css/media.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"> <!-- link for font awsome icons -->
+	<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet"> <!-- link for teko font from google api -->
+	<style>
+
+	.myCard {   /*** table classified as myCard aligned centered  **/
+          padding: 25px 5px 5px;
+	      border: 1px solid orange; 
+	      border-radius: 9px;   /*** makes outer edges curved  ***/ 
+	      box-shadow: 2px 2px 5px gray;
+	      margin:auto;
+	      background-color:white;
+	      width:200px;
+	      height: 50px;
+	      font-size:35px;
+	      
+	}
+	   td,th {    /** table data and heading having same dimensions **/
+	       border: 1px solid black;
+	       width:50px;
+	       height: 50px; 
+	       
+	   }
+
+	/* it is one of the cell in the bingo table named FREE having forecolor white and backgroun color black */
+	.freeCell{
+	     background-color:black;   
+	     color:white;        
+	}
+
+	/* here css is applied to the background of the table  heading   */
+	th {
+	   background-color:#ADD8E6; 
+	}
+    
+    
+       
+    
+        
+	</style>
+</head>
+<body>   <!-- In body Teko font is applied -->
+	<!-- header is having  orange color background  -->
+	<header>
+		<h1>Games and Other Web Apps</h1><!--  h1 has a font size of 3.9 em and h2 of 2.5 em;  -->
+		<h2>SYST10049 Web Development</h2>
+	</header>
+	<nav>  <!-- navigation takes to different pages  -->
+		<a href="../index.html"><i aria-hidden="true" class="fa fa-home"></i>Home</a> <!-- link to home page -->
+		<div class="dropdown">  <!-- div having sub div which is having links --> 
+			<a href="#"><i aria-hidden="true" class="fa fa-gamepad"></i> &nbsp;Games</a> <!-- link to games page -->
+			<div class="dropdown-content">  <!-- div class of dropdown  is here which drops the sub navigation containing icons and links to different pages and  -->
+				<a href="cryptogram.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Cryptograms</a> <a href="hangman.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Hangman</a> <a href="memory.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Memory</a> <a href="tictactoe.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Tic-Tac-Toe</a> <a href="bingo.html"><i aria-hidden="true" class="fa fa-check-square-o"></i>&nbsp;Bingo</a>
+			</div>
+		</div><a href="#"><i aria-hidden="true" class="fa fa-sign-out"></i>Logout</a>  <!-- link to logout page but goes no where -->
+	</nav>
+	<main>
+		<h3>BINGO</h3>
+		<table class="myCard"> <!-- it is a 6*5 table -->
+			<tr>
+				<!-- 1st row of the table is having heading BINGO-->
+				<th>B</th>
+				<th>I</th>
+				<th>N</th>
+				<th>G</th>
+				<th>O</th>
+			</tr>
+			<tr>
+				<!-- 2nd row of the table -->
+				<td>14</td>
+				<td>17</td>
+				<td>42</td>
+				<td>52</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<!-- 3rd row of the table -->
+				<td>6</td>
+				<td>25</td>
+				<td>40</td>
+				<td>51</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<!-- 4th row of the table containing one free cell -->
+				<td>1</td>
+				<td>24</td>
+				<td class="freeCell">FREE</td><!-- free cell forcolor white and backgroun color black -->
+				<td>46</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<!-- 5th row of the table -->
+				<td>3</td>
+				<td>18</td>
+				<td>43</td>
+				<td>54</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<!-- 6th row of the table -->
+				<td>11</td>
+				<td>30</td>
+				<td>34</td>
+				<td>53</td>
+				<td>64</td>
+			</tr>
+		</table><br>
+		<button id="button3">Start A Game</button>
+	</main>
+	<div id="footer">  <!-- footer is having icons of facebook,pinterest,linkedin,flickr going  nowhere -->
+		<a href="#"><i aria-hidden="true" class="fa fa-facebook-square"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-pinterest-square"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-flickr"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i></a>
+		<address>  <!-- it is a white color alike -->
+			Inderpreet Singh @ Web Development,Sheridan College
+		</address>
+	</div>
+</body>
+</html>

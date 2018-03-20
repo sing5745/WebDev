@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Author:Inderpreet Singh
+File name: template.html
+Version:1.0
+Date Created: 24th march,2017
+Date modified :
+description:
+ the home page for assignment 3 
+  -->
+<head>
+	<title>Tic Tac Toe</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/main.css" rel="stylesheet" type="text/css"> <!-- link for external stylesheets  -->
+    <link rel="stylesheet" href="../css/media.css" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"> <!-- link for font awsome icons -->
+	<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet"> <!-- link for teko font from google api -->
+	<style>
+	    table {   
+	      margin: 0 auto; /* margin to align it center **/
+	      background-color: white;
+	   }
+	     
+	    td {     /***  dimensions are 50*50   **/
+	      border: 1px solid blue; 
+	      width: 50px;
+	      height: 50px;
+	      font-size: 1.8em;
+	      font-family: sans-serif;
+	      padding: 10px;     
+	  } 
+	   
+	    tr:first-child td {   /*** table row having 1st child td will not be having top-border **/                   
+	      border-top: none;            
+	  }
+	   
+	   tr:last-child td {
+	      border-bottom: none;  /*** table row having last child td will not be having bottom-border **/
+	  }
+	 
+	   td:first-child {
+	      border-left: none;   /*** table data having 1st child will not be having left-border **/
+	  }
+	   
+	   td:last-child {
+	     border-right: none;  /*** table data having last child will not be having right-border **/
+	 }
+	 
+    
+        
+	</style>
+</head>
+<body>
+	<!-- header is the top start of the web project and has orange color background  -->
+	<header>
+		<h1>Games and Other Web Apps</h1><!--  h1 has a font size of 3.9 em and h2 of 2.5 em;  -->
+		<h2>SYST10049 Web Development</h2>
+	</header>
+	<nav> <!-- In nav three links are arranged horizontally whereas there is one sub navigation under games and is vertivally aligned --> 
+		<a href="../index.html"><i aria-hidden="true" class="fa fa-home"></i>Home</a>
+		<div class="dropdown"> <!-- div having sub div which is having links -->
+			<a href="#"><i aria-hidden="true" class="fa fa-gamepad"></i> &nbsp;Games</a>
+			<div class="dropdown-content"> <!-- div class of dropdown  is here which drops the sub navigation containing icons and links to different pages and  -->
+				<a href="cryptogram.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Cryptograms</a> <a href="hangman.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Hangman</a> <a href="memory.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Memory</a> <a href="tictactoe.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Tic-Tac-Toe</a> <a href="bingo.html"><i aria-hidden="true" class="fa fa-check-square-o"></i>&nbsp;Bingo</a>
+			</div>
+		</div><a href="#"><i aria-hidden="true" class="fa fa-sign-out"></i>Logout</a>  <!-- link to logout page but goes no where -->
+	</nav>
+	<main>
+		<h3>TIC TAC TOE</h3>  
+		<table>
+			<tr>  <!-- first row  -->
+				<td>T</td>
+				<td>I</td>
+				<td>C</td>
+			</tr>
+			<tr> <!-- 2nd row  -->
+				<td>T</td>
+				<td>A</td>
+				<td>C</td>
+			</tr>
+			<tr> <!-- 3rd row  -->
+				<td>T</td>
+				<td>O</td>
+				<td>E</td>
+			</tr>
+		</table><br>
+		<button id="button3">Start A Game</button> <!-- button styling explained in main CSS -->
+	</main>
+	<div id="footer"> <!-- footer is having icons of facebook,pinterest,linkedin,flickr and anchor  going  nowhere -->
+		<a href="#"><i aria-hidden="true" class="fa fa-facebook-square"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-pinterest-square"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-flickr"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i></a>
+		<address>
+			Inderpreet Singh @ Web Development,Sheridan College
+		</address>
+	</div>
+</body>
+</html>

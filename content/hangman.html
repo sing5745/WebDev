@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Author:Inderpreet Singh
+File name: template.html
+Version:1.0
+Date Created: 24th march,2017
+Date modified :
+description:
+ the bingo page for assignment 3 
+  -->
+<head>
+	<title>Hangman</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/main.css" rel="stylesheet" type="text/css"> <!-- link for external stylesheets  -->
+    <link rel="stylesheet" href="../css/media.css" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"> <!-- link for font awsome icons -->
+	<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet"> <!-- link for teko font from google api -->
+	<style>
+	#phrase{  /*** phrase in uppercase and spacing is 8px ****/
+	       font-size: 1.3em;
+	       letter-spacing:8px;
+	       text-transform: uppercase;
+	}
+
+	.alphabet {  /***  ***/
+	     box-sizing: border-box;  /**** The box-sizing property is used to tell the browser what the sizing properties (width and height) should include. ****/
+	     margin: 20px auto;
+	     padding: 0;
+	     width: 280px; 
+	}
+	.alphabet li { 
+	    max-width: 420px; 
+	    background:white;
+	    border-radius: 5px; /** making borders curve **/
+	    border: solid 1px ;
+	    color:orange;
+	    cursor: pointer;   
+	    float: left;  /*** make it align horizontally **/
+	    font-weight: 600;
+	    height: 30px;
+	    list-style: none;
+	    margin: 5px;   
+	    padding-top: 10px;
+	    text-transform: uppercase;
+	    width: 35px;
+	}
+
+	.alphabet [title=a], 
+	.alphabet [title=e], 
+	.alphabet [title=k], 
+	.alphabet [title=v]{
+	   background-color: gray;
+	   color: lightgray;         /*** to make phrase letters to look like used with gray background color **/
+	}
+
+
+
+	.alphabet li:hover {  /*** when hover over color changes to black **/
+	   background: black;
+	   border: solid 1px #fff;
+	   box-shadow: none;  /* no box shadow */
+	   color: #fff;
+	}
+	.alphabet:after {
+        clear: both;  /** No floating elements allowed on the left or the right side of a specified  element: **/
+	   content: "";
+	   display: table; 
+	}
+       
+
+	</style>
+</head>
+<body>
+	<header>  <!-- it is the top start of the project -->
+		<h1>Games and Other Web Apps</h1><!--  h1 has a font size of 3.9 em and h2 of 2.5 em;  -->
+		<h2>SYST10049 Web Development</h2>
+	</header>
+	<nav>  <!-- navigation takes to different pages  -->
+		<a href="../index.html"><i aria-hidden="true" class="fa fa-home"></i>Home</a> <!-- link to home page -->
+		<div class="dropdown">  <!-- div having sub div which is having links --> 
+			<a href="#"><i aria-hidden="true" class="fa fa-gamepad"></i> &nbsp;Games</a> <!-- link to games page -->
+			<div class="dropdown-content">  <!-- div class of dropdown  is here which drops the sub navigation containing icons and links to different pages and  -->
+				<a href="cryptogram.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Cryptograms</a> <a href="hangman.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Hangman</a> <a href="memory.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Memory</a> <a href="tictactoe.html"><i aria-hidden="true" class="fa fa-gamepad"></i>&nbsp;Tic-Tac-Toe</a> <a href="bingo.html"><i aria-hidden="true" class="fa fa-check-square-o"></i>&nbsp;Bingo</a>
+			</div>
+		</div><a href="#"><i aria-hidden="true" class="fa fa-sign-out"></i>Logout</a>  <!-- link to logout page but goes no where -->
+	</nav>
+	<main>
+		<h3>Hangman</h3>
+		<p id="phrase">_ a k v _ _ _ e</p>
+		<p>Select your guess by clicking on the corresponding letter</p>
+		<ul class="alphabet">
+			<li title="a">a</li>  <!-- title used to reach css -->
+			<li>b</li>
+			<li>c</li>
+			<li>d</li>
+			<li title="e">e</li> <!-- title used to reach css -->
+			<li>f</li>
+			<li>g</li>
+			<li>h</li>
+			<li>i</li>
+			<li>j</li>
+			<li title="k">k</li> <!-- title used to reach css -->
+			<li>l</li>
+			<li>m</li>
+			<li>n</li>
+			<li>o</li>
+			<li>p</li>
+			<li>q</li>
+			<li>r</li>
+			<li>s</li>
+			<li>t</li>
+			<li>u</li>
+			<li title="v">v</li> <!-- title used to reach css -->
+			<li>w</li>
+			<li>x</li>
+			<li>y</li>
+			<li>z</li>
+		</ul><button id="button3">Start A Game</button>
+	</main>
+	<div id="footer">  <!-- footer is having icons of facebook,pinterest,linkedin,flickr going  nowhere -->
+		<a href="#"><i aria-hidden="true" class="fa fa-facebook-square"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-pinterest-square"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-flickr"></i></a> <a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i></a>
+		<address>  
+			Inderpreet Singh @ Web Development,Sheridan College
+		</address>
+	</div>
+</body>
+</html>

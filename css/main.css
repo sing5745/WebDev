@@ -1,0 +1,134 @@
+/****
+Author:Inderpreet Singh
+File name: main.css
+Version:1.0
+Date Created: 17th april,2017
+Date modified :
+description:
+ the main css  for assignment 4 
+  ****/
+
+
+
+body {
+	background-image: url("../images/black_city.jpg");  /** background image of the city **/
+	font-family: 'Teko', sans-serif;
+    
+} 
+
+header {
+	padding: 5px;
+	background-color: orange;   
+	opacity: 0.5;
+}
+
+h1 {
+	font-size: 3em;  /** as required **/
+}
+
+h2 {
+	font-size: 2em;   /** as required **/
+}
+
+nav {
+	background-color: #222;  /** background of navigation **/
+	opacity: 0.85;  /** with transparency **/
+	padding: 4px;
+	color: orange;
+}
+
+a {
+	text-decoration: none; /* no text decoration on nav tags **/
+	color: orange;
+	padding: 2px 8px;
+}
+
+a:hover {
+	/* invert colors when anchor is hovered over */
+	color: black;
+	background-color: orange;
+}
+
+.dropdown {  /** styled postion of the sub navigation **/
+	position: relative;
+	display: inline-block;  /** no need of clear property by using inline block ***/
+}
+
+.dropdown-content { /* this div used to style sub navigation **/
+	display: none;
+	position: absolute;
+	background-color: black;
+	min-width: 120px;
+	box-shadow: 2px 2px 3px 0px rgba(200, 200, 200, 0.2); /** The box-shadow property attaches one or more shadows to an element  **/
+	padding: 2px;
+}
+
+.dropdown:hover .dropdown-content {   /* hover in dropdown and dropdown content divs **/
+	display: block;
+}
+
+
+/* hilights the same width for all anchors on hover, otherwise only the length of the text */
+
+.dropdown-content a {
+	display: inline-block;
+	width: 80%;
+}
+
+a:hover {
+	/* invert colors when anchor is hovered over */
+	color: black;
+	background-color: orange;
+}
+
+h3 {
+	text-align: center;
+	color: white;
+	font-size: 1.8em;
+}
+
+p {
+	color: white; /* for color for every para elemnts**/
+}
+
+main {
+	background-color: rgba(0, 0, 0, 0.85); /** creating main little bit transparent **/
+	margin: 10px auto 25px;
+	padding: 0 5px;
+	text-align: center;
+	width: 640px;  /* width of main */
+}
+
+#button3 {   /*** button styled according to requirements **/
+	background-color: orange;
+	border: 1px #fff solid;
+	border-radius: 5px;   /**  makes border curve **/
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.2em;
+	padding: 18px 10px;
+	text-decoration: none;  /* no text decoration used */
+	width: 180px;
+	margin: 10px;
+}
+
+#footer {
+	position: fixed;  /** footer fixed to the bootom containing icons **/
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 7px;
+	background-color: black;
+	opacity: 0.75;
+	text-align: center;  /** aligned center**/
+	color: orange;
+    margin: 0;
+}
+
+#footer a{
+    margin: -8px;  /** negaive margin used to make anchor nearby **/
+}
+
+address {
+	color: #efefef; /* color according to screenshot **/
+}
